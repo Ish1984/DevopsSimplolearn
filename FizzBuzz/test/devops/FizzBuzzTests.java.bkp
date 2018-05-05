@@ -1,0 +1,43 @@
+package devops;
+
+import org.junit.*;
+
+public class FizzBuzzTests {
+	private FizzBuzz fizzBuzz ;
+	
+	@Before
+	public void setup() {
+		fizzBuzz = new FizzBuzz() ;
+	}
+
+	@Test
+	public void numberOneReturnsOne() {
+		Assert.assertEquals( "One", "1", fizzBuzz.play( 1 ) ) ;
+	}
+	
+	@Test
+	public void numberTwoReturnsTwo() {
+		Assert.assertEquals( "Two", "2", fizzBuzz.play( 2 ) ) ;
+	}
+	
+	@Test
+	public void numberThreeReturnsThree() {
+		Assert.assertEquals( "Three", "3", fizzBuzz.play( 3 ) ) ;
+	}
+	@Test
+	public void numberThreeReturnsFour() {
+		Assert.assertEquals( "Four", "4", fizzBuzz.play( 4 ) ) ;
+	}
+	@Test
+	public void numberThreeReturnsFive() {
+		Assert.assertEquals( "Five", "5", fizzBuzz.play( 5 ) ) ;
+	}
+	@Test
+	public void numberThreeReturnsSix() {
+		Assert.assertEquals( "Six", "6", fizzBuzz.play( 6 ) ) ;
+	}
+	@Test
+	public void numberThreeReturnsSeven() {
+		Assert.assertEquals( "Seven", "7", fizzBuzz.play( 7 ) ) ;
+	}
+}
