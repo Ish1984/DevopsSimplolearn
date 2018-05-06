@@ -12,14 +12,19 @@ public class FizzBuzz
     String tens[]={" "," ","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"};
 
     public String convert(int n){
+    	if(n<0){
+    		return "Number out of Range";
+    	}
     	if(n<20){
     		return units[n];
     	}
     	else if(n<100){
     		return tens[n/10]+((n%10>0)?" "+convert(n%10):"");
-    	}else{
+    	}else if(n<1000) 	{
     		return units[n/100]+" Hundred"+((n%100>0)?" and "+convert(n%100):"");
     		
+    	} else {
+    		return "Number out of Range";
     	}
     /*if(n > 19) { System.out.print(tens[n/10]+" "+units[n%10]);} 
     else { System.out.print(units[n]);}
@@ -36,9 +41,6 @@ public class FizzBuzz
 		   int number=Integer.parseInt(value);
 		   if(number==0){
 			   System.out.println("Bye");
-			   return;
-		   }else if(number<0 || number>=1000){
-			   System.out.println("Invalid number");
 			   return;
 		   }else{
 			   String result=a.convert(number);

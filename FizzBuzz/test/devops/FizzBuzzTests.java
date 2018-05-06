@@ -11,7 +11,12 @@ public class FizzBuzzTests {
 	
 	@Test
 	public void numberOutOfRangeReturnsError(){
-		Assert.assertEquals("Error","Number out of range",fizzBuzz.convert(-1));		
+		Assert.assertEquals("Error","Number out of Range",fizzBuzz.convert(-1));		
+	}
+	
+	@Test
+	public void numberGreaterThanNineHundredNinetyNineReturnsError(){
+		Assert.assertEquals("Error greater than 999","Number out of Range",fizzBuzz.convert(1000));		
 	}
 	
 	@Test
